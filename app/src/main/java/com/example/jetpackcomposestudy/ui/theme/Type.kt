@@ -17,7 +17,7 @@ val Typography = Typography(
         fontFamily = FontFamily.Cursive,
         fontWeight = FontWeight.Bold,
         fontSize = 32.sp
-    )
+    ),
     /* Other default text styles to override
     button = TextStyle(
         fontFamily = FontFamily.Default,
@@ -30,4 +30,5 @@ val Typography = Typography(
         fontSize = 12.sp
     )
     */
+
 )
