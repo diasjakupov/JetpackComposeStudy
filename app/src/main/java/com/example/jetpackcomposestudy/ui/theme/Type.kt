@@ -2,21 +2,32 @@ package com.example.jetpackcomposestudy.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.jetpackcomposestudy.R
 
 // Set of Material typography styles to start with
+val Montserrat=FontFamily(
+    Font(R.font.montserrat_medium),
+)
+
 val Typography = Typography(
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = Montserrat,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
     ),
     h5 = TextStyle(
-        fontFamily = FontFamily.Cursive,
+        fontFamily = Montserrat,
         fontWeight = FontWeight.Bold,
         fontSize = 32.sp
+    ),
+    h6 = TextStyle(
+        fontFamily = Montserrat,
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp
     ),
     /* Other default text styles to override
     button = TextStyle(
