@@ -1,5 +1,6 @@
 package com.example.jetpackcomposestudy.ui.navigation
 
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
@@ -17,6 +18,13 @@ fun Navigation(navController: NavHostController) {
     ) {
         composable(route = ScreenRoutes.MainScreen.route) {
             MainScreen()
+        }
+        composable(route = ScreenRoutes.NotesScreen.route) {
+            Text(text = "Notes screen")
+        }
+        composable(route = ScreenRoutes.CompletedScreen.route) {
+            Text(text = "Completed screen")
+
         }
     }
 }
