@@ -39,8 +39,10 @@ fun Drawer(navHostController: NavHostController) {
     )
 
     var currentPage by remember {
-        mutableStateOf(navHostController.currentBackStackEntry?.destination?.route)
+        val data=navHostController.currentBackStackEntry?.destination?.route ?: ScreenRoutes.MainScreen.route
+        mutableStateOf(data)
     }
+
     Surface(
         modifier = Modifier
             .width(240.dp)
@@ -60,7 +62,6 @@ fun Drawer(navHostController: NavHostController) {
             Box(
                 contentAlignment = Alignment.BottomStart,
                 modifier = Modifier
-                    .fillMaxWidth()
                     .height(125.dp)
             ) {
                 Icon(

@@ -9,6 +9,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
@@ -28,6 +29,7 @@ class MainActivity : ComponentActivity() {
             navController= rememberNavController()
             val scaffoldState = rememberScaffoldState()
             val coroutineScope = rememberCoroutineScope()
+
             JetpackComposeStudyTheme {
                 // A surface container using the 'background' color from the theme
                 Scaffold(
@@ -41,9 +43,8 @@ class MainActivity : ComponentActivity() {
                     drawerShape = drawerCustomShape(800f)
 
                 ) {
-
+                    Navigation(navController)
                 }
-                Navigation(navController)
             }
         }
     }
