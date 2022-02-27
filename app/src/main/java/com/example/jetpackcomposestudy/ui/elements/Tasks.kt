@@ -14,6 +14,7 @@ fun Tasks(){
         lightPink to lightPinkBorder,
         lightYellow to lightYellowBorder
     )
+
     LazyColumn(){
         items(5){
             if (colorCount<3){

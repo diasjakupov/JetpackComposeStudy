@@ -3,6 +3,7 @@
     package="com.example.jetpackcomposestudy">
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"

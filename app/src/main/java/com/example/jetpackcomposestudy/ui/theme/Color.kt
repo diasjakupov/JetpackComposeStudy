@@ -4,8 +4,7 @@ import androidx.compose.ui.graphics.Color
 
 val Beige = Color(101, 101, 101, 255)
 val DarkGrey = Color(59, 58, 56)
-val LightGrey = Color(255, 255, 255, 255)
-val Purple700 = Color(0xFF3700B3)
+
 val Teal200 = Color(0xFF03DAC5)
 val Toxic = Color(2, 173, 95, 255)
 
