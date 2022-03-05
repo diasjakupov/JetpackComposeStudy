@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.Flow
 interface TaskDao {
 
     @Query("SELECT * FROM tasks_table")
-    suspend fun getTaskList(): Flow<List<Task>>
+    fun getTaskList(): Flow<List<Task>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTask(task: Task)

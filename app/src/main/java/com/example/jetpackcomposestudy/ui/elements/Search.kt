@@ -73,7 +73,6 @@ fun Search() {
                     Log.e("TAG", textValue)
                     focusManager.clearFocus()
                     //TODO(Trigger searching func from viewmodel)
-
                 }
             )
         )

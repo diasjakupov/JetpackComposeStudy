@@ -19,8 +19,10 @@ import com.example.jetpackcomposestudy.ui.elements.drawerCustomShape
 import com.example.jetpackcomposestudy.ui.navigation.Navigation
 import com.example.jetpackcomposestudy.ui.screens.ScreenRoutes
 import com.example.jetpackcomposestudy.ui.theme.*
+import dagger.hilt.android.AndroidEntryPoint
 
 @ExperimentalMaterialApi
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private lateinit var navController:NavHostController
     override fun onCreate(savedInstanceState: Bundle?) {

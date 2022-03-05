@@ -7,6 +7,6 @@ import com.example.jetpackcomposestudy.data.db.models.Task
 
 
 @Database(entities = [Task::class], version = 1)
-abstract class Database: RoomDatabase() {
+abstract class TaskDatabase: RoomDatabase() {
     abstract fun TaskDao(): TaskDao
 }

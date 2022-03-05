@@ -19,11 +19,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.jetpackcomposestudy.data.db.models.Task
 import com.example.jetpackcomposestudy.ui.theme.Shapes
 import com.example.jetpackcomposestudy.ui.theme.Typography
 
 @Composable
-fun TaskItem(bg: Color?, borderColor: Color?) {
+fun TaskItem(task: Task,bg: Color?, borderColor: Color?) {
     var expanded by remember {
         mutableStateOf(false)
     }
@@ -37,13 +38,13 @@ fun TaskItem(bg: Color?, borderColor: Color?) {
         border = BorderStroke(1.dp, borderColor ?: Color.Gray)
     ) {
         Column(
-            modifier = Modifier.padding(8.dp)
+            modifier = Modifier.padding(8.dp).padding(start = 4.dp)
         ) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth(), verticalAlignment = Alignment.CenterVertically
             ) {
-                Text("Lorem ipsum", style = Typography.h6, modifier = Modifier.weight(8f))
+                Text(task.title, style = Typography.h6, modifier = Modifier.weight(8f))
                 IconButton(onClick = { expanded = !expanded }) {
                     Icon(
                         imageVector = if (!expanded) Icons.Default.ArrowDropDown else Icons.Default.ArrowDropUp,
@@ -62,7 +63,7 @@ fun TaskItem(bg: Color?, borderColor: Color?) {
                         .height(10.dp)
                 )
                 Column() {
-                    Text(text = "Lorem ipsum".repeat(15))
+                    Text(text = task.content, modifier = Modifier.padding(bottom = 8.dp))
                 }
             }
 
@@ -71,9 +72,3 @@ fun TaskItem(bg: Color?, borderColor: Color?) {
     }
 }
 
-
-@Composable
-@Preview
-fun TaskItemPreview() {
-    TaskItem(Color.Green, Color.Gray)
-}

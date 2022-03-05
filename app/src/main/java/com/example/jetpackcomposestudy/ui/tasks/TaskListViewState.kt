@@ -1,4 +1,4 @@
-package com.example.jetpackcomposestudy.data.states.tasks
+package com.example.jetpackcomposestudy.ui.tasks
 
 import com.example.jetpackcomposestudy.data.db.models.Task
 

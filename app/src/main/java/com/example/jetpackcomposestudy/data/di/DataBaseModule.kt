@@ -2,8 +2,7 @@ package com.example.jetpackcomposestudy.data.di
 
 import android.content.Context
 import androidx.room.Room
-import androidx.room.RoomDatabase
-import com.example.jetpackcomposestudy.data.db.Database
+import com.example.jetpackcomposestudy.data.db.TaskDatabase
 import com.example.jetpackcomposestudy.data.db.dao.TaskDao
 import dagger.Module
 import dagger.Provides
@@ -13,23 +12,26 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 
-@InstallIn(SingletonComponent::class)
 @Module
+@InstallIn(SingletonComponent::class)
 class DataBaseModule {
 
     @Provides
     @Singleton
-    fun provideDataBase(@ApplicationContext context: Context): Database {
+    fun provideDataBase(@ApplicationContext context: Context): TaskDatabase {
+
         return Room.databaseBuilder(
             context,
-            Database::class.java,
-            "App_Database"
+            TaskDatabase::class.java,
+            "app_Database"
         ).build()
     }
 
+
+
     @Provides
     @Singleton
-    fun provideTaskDao(database: Database):TaskDao{
+    fun provideTaskDao(database: TaskDatabase): TaskDao {
         return database.TaskDao()
     }
 }
