@@ -1,5 +1,6 @@
 package com.example.jetpackcomposestudy.ui.navigation
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -12,6 +13,7 @@ import com.example.jetpackcomposestudy.data.viewmodels.TaskViewModel
 import com.example.jetpackcomposestudy.ui.screens.MainScreen
 import com.example.jetpackcomposestudy.ui.screens.ScreenRoutes
 
+@ExperimentalAnimationApi
 @Composable
 fun Navigation(navController: NavHostController) {
     NavHost(

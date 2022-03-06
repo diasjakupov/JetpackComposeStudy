@@ -1,11 +1,12 @@
 package com.example.jetpackcomposestudy.ui.elements
 
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.*
 import com.example.jetpackcomposestudy.data.db.models.Task
-import com.example.jetpackcomposestudy.ui.tasks.TaskListViewState
 import com.example.jetpackcomposestudy.ui.theme.*
 
+@ExperimentalAnimationApi
 @Composable
 fun Tasks(tasks: List<Task>) {
     val taskColors = listOf(
